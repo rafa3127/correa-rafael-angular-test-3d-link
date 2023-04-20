@@ -1,0 +1,16 @@
+<form>
+    <h2>Form Reactivo con Contador de caracteres</h2>
+    <mat-form-field appearance="fill" class="field">
+        <mat-label>Input 1</mat-label>
+        <input matInput [(ngModel)]="input1" name="input1" #input1Ctrl="ngModel">
+        <mat-hint>Número de Caracteres: {{ input1.length }}</mat-hint>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill" class="field">
+        <mat-label>Input 2</mat-label>
+        <input matInput [(ngModel)]="input2" name="input2" #input2Ctrl="ngModel">
+        <mat-hint>Número de Caracteres: {{ input2.length }}</mat-hint>
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" type="submit">Agregar</button>
+</form>

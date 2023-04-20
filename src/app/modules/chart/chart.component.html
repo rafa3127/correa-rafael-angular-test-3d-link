@@ -1,0 +1,17 @@
+<div>
+    <select appSortChart [sortBy]="selectedSort" (sortByChange)="selectedSort = $event">
+      <option value="year">Ordenar por año</option>
+      <option value="seriesA">Ordenar por Serie A</option>
+      <option value="seriesB">Ordenar por Serie B</option>
+    </select>
+  </div>
+  <div class="chart-container">
+    <canvas baseChart
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+            [type]="'bar'">
+    </canvas>
+  </div>
+  

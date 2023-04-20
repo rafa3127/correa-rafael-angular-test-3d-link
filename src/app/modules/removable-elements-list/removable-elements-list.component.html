@@ -1,0 +1,5 @@
+<div class="removable-elements-list-container">
+    <h1>Lista de Elementos Eliminables</h1>
+    <!-- Se imprimen los items extraidos del observable en componentes removable-element -->
+    <app-removable-element *ngFor="let item of items$ | async" [item]="item" (remove)="removeItem(item)"></app-removable-element>
+</div>

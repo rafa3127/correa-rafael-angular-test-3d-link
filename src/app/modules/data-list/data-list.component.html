@@ -1,0 +1,14 @@
+<div class="form-container">
+  <form (submit)="addNewItem()" class="form">
+    <h3>Agregar Nuevo Elemento</h3>
+    <mat-form-field class="field">
+      <mat-label>Nuevo elemento</mat-label>
+      <input matInput [(ngModel)]="newItemName" name="newItemName">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Agregar</button>
+  </form>
+</div>
+<div class="data-list-container">
+  <h3>Lista de elementos</h3>
+  <app-data-list-item *ngFor="let item of items$ | async" [item]="item"/>
+</div>
